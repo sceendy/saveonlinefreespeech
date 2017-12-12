@@ -1,8 +1,8 @@
 (function() {
-  document.querySelector(".quote-carousel .next").addEventListener("click", nextSlide);
-  document.querySelector(".quote-carousel .prev").addEventListener("click", previousSlide);
+  document.querySelector(".secondary-content__quotes .next").addEventListener("click", nextSlide);
+  document.querySelector(".secondary-content__quotes .prev").addEventListener("click", previousSlide);
   
-  var slides = document.getElementsByClassName("quoteCarouselBlock");
+  var slides = document.getElementsByClassName("media-list__item");
   var slideIndex = 0;
   showSlides();
 
@@ -28,8 +28,8 @@
 
   function showSlides() {
     for (var i = 0; i < slides.length; i++) {
-      slides[i].classList.add("hidden");
+      slides[i].classList.add("u--hidden");
     }
-    slides[slideIndex].classList.remove("hidden");
+    slides[slideIndex].classList.remove("u--hidden");
   }
 })();
